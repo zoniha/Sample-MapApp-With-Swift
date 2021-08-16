@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		41658DD126CA49A800ADC852 /* SampleMapAppWithSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41658DD026CA49A800ADC852 /* SampleMapAppWithSwiftApp.swift */; };
-		41658DD326CA49A800ADC852 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41658DD226CA49A800ADC852 /* ContentView.swift */; };
+		41658DD326CA49A800ADC852 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41658DD226CA49A800ADC852 /* HomeView.swift */; };
 		41658DD526CA49AF00ADC852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41658DD426CA49AF00ADC852 /* Assets.xcassets */; };
 		41658DD826CA49AF00ADC852 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41658DD726CA49AF00ADC852 /* Preview Assets.xcassets */; };
+		41658DE126CA5FCC00ADC852 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41658DE026CA5FCC00ADC852 /* MapView.swift */; };
+		41658DE826CA6BB700ADC852 /* SearchKey+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41658DE726CA6BB700ADC852 /* SearchKey+mock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		41658DCD26CA49A800ADC852 /* SampleMapAppWithSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleMapAppWithSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41658DD026CA49A800ADC852 /* SampleMapAppWithSwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleMapAppWithSwiftApp.swift; sourceTree = "<group>"; };
-		41658DD226CA49A800ADC852 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		41658DD226CA49A800ADC852 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		41658DD426CA49AF00ADC852 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41658DD726CA49AF00ADC852 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		41658DD926CA49AF00ADC852 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41658DE026CA5FCC00ADC852 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		41658DE726CA6BB700ADC852 /* SearchKey+mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchKey+mock.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				41658DD026CA49A800ADC852 /* SampleMapAppWithSwiftApp.swift */,
-				41658DD226CA49A800ADC852 /* ContentView.swift */,
+				41658DE526CA601A00ADC852 /* Views */,
 				41658DD426CA49AF00ADC852 /* Assets.xcassets */,
 				41658DD926CA49AF00ADC852 /* Info.plist */,
 				41658DD626CA49AF00ADC852 /* Preview Content */,
@@ -65,17 +69,47 @@
 			isa = PBXGroup;
 			children = (
 				41658DD726CA49AF00ADC852 /* Preview Assets.xcassets */,
+				41658DEA26CA6BC000ADC852 /* Mocks */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		41658DE526CA601A00ADC852 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				41658DD226CA49A800ADC852 /* HomeView.swift */,
+				41658DE026CA5FCC00ADC852 /* MapView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		41658DEA26CA6BC000ADC852 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				41658DE726CA6BB700ADC852 /* SearchKey+mock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4128786626CA9CE400357AD5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		41658DCC26CA49A800ADC852 /* SampleMapAppWithSwift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41658DDC26CA49AF00ADC852 /* Build configuration list for PBXNativeTarget "SampleMapAppWithSwift" */;
 			buildPhases = (
+				4128786226CA83DB00357AD5 /* Run SwiftLint */,
+				4128786626CA9CE400357AD5 /* Headers */,
 				41658DC926CA49A800ADC852 /* Sources */,
 				41658DCA26CA49A800ADC852 /* Frameworks */,
 				41658DCB26CA49A800ADC852 /* Resources */,
@@ -133,13 +167,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4128786226CA83DB00357AD5 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		41658DC926CA49A800ADC852 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41658DD326CA49A800ADC852 /* ContentView.swift in Sources */,
+				41658DD326CA49A800ADC852 /* HomeView.swift in Sources */,
+				41658DE126CA5FCC00ADC852 /* MapView.swift in Sources */,
 				41658DD126CA49A800ADC852 /* SampleMapAppWithSwiftApp.swift in Sources */,
+				41658DE826CA6BB700ADC852 /* SearchKey+mock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
