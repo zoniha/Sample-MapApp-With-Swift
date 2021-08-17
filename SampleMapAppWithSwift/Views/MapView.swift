@@ -2,7 +2,7 @@ import SwiftUI
 import MapKit
 
 struct MapView: UIViewRepresentable {
-	var searchKey: String
+	let searchKey: String
 
 	func makeUIView(context: Context) -> MKMapView {
 		MKMapView()
